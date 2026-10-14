@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --kw-navy-950: #002348;
+  --kw-navy-900: #003665;
+  --kw-blue-900: #004C83;
+  --kw-blue-700: #006FB8;
+  --kw-blue-500: #079BE8;
+  --kw-cyan: #19C8F4;
+  --kw-sky: #A9E7FF;
+  --kw-white: #FFFFFF;
+  --kw-leaf: #4DAD35;
+
+  --blue-950: #021B3D;
+  --blue-900: #022F5E;
+  --blue-800: #034A8A;
+  --blue-700: #0284C7;
+  --blue-600: #0EA5E9;
+  --blue-300: #7DD3FC;
+  --cyan-neon: #00F0FF;
+  --turquoise: #06B6D4;
+  --ice: #E0F2FE;
+  --text-muted: #BAE6FD;
+  --leaf: #10B981;
+  --cta: #FF6B00;
+  --cta-hover: #FF5500;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    color: #FFFFFF;
+    background-color: #021838;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Modern Professional Tech CTA Button (Vibrant Glow Ribbon) */
+.btn-cta-orange {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8500 50%, #FFA800 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-cta-orange:hover {
+  background: linear-gradient(135deg, #FF5500 0%, #FF7700 50%, #FF9900 100%);
+  box-shadow: 0 12px 30px rgba(255, 107, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-cta-orange:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4);
+}
+
+/* High-Tech Cyan/Azure Action Button */
+.btn-beveled-blue {
+  background: linear-gradient(135deg, #0284C7 0%, #0098EA 50%, #00F0FF 100%);
+  border: 1px solid rgba(143, 209, 240, 0.5);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-beveled-blue:hover {
+  background: linear-gradient(135deg, #0369A1 0%, #0284C7 50%, #38BDF8 100%);
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.55);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism Title Plaque Banner */
+.banner-plaque {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 255, 0.9) 100%);
+  box-shadow: 0 12px 30px rgba(1, 24, 53, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(186, 230, 253, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+/* Left Vertical Ribbon ("Quick Quote" Ribbon) */
+.ribbon-vertical-left {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: linear-gradient(180deg, #0284C7 0%, #023A6E 100%);
+  box-shadow: 4px 0 16px rgba(1, 24, 53, 0.45);
+  border-right: 1px solid #38BDF8;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+/* Deep Ocean Canvas with subtle water vignette */
+.bg-ukrainian-ocean {
+  background: linear-gradient(180deg, #021B3D 0%, #034A8A 40%, #022F5E 75%, #011833 100%);
+}
+
+.bg-panel-translucent {
+  background: rgba(3, 34, 71, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 16px 40px rgba(1, 20, 48, 0.5);
+}
+
+/* Water Droplet & Wave Keyframe Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatMedium {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-13px) scale(1.02);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-6px) translateX(3px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmerGlint {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: floatMedium 5.5s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.animate-shimmer-glint {
+  animation: shimmerGlint 2.8s ease-in-out infinite;
+}

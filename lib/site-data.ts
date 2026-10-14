@@ -581,21 +581,56 @@ export const SITE_CONFIG = {
   ],
 };
 
-const rawImageArray = [
-  'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_ATM_Community_Service_iadjv3.png',
-  'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png',
-  'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003944/Khumani_Water_ATM_School_Plaza_wa0a0i.png',
-  'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_Purification_Showroom_vjvvfg.png',
-];
+export interface SiteImage {
+  id: string;
+  url: string;
+  alt: string;
+  tag: string;
+  title: string;
+  caption: string;
+}
 
-export const KHUMANI_REAL_IMAGES: string[] & {
-  communityService: string;
-  kioskRefill: string;
-  schoolPlaza: string;
-  showroom: string;
-} = Object.assign(rawImageArray, {
-  communityService: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_ATM_Community_Service_iadjv3.png',
-  kioskRefill: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png',
-  schoolPlaza: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003944/Khumani_Water_ATM_School_Plaza_wa0a0i.png',
-  showroom: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_Purification_Showroom_vjvvfg.png',
-});
+const communityService: SiteImage = {
+  id: 'community-service',
+  url: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_ATM_Community_Service_iadjv3.png',
+  alt: 'Khumani Water ATM community service station',
+  tag: 'Community Service',
+  title: 'Water ATM Community Service Station',
+  caption: 'Automated public water dispensing for markets, bus stands and community centres.',
+};
+
+const kioskRefill: SiteImage = {
+  id: 'kiosk-refill',
+  url: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png',
+  alt: 'Khumani Water automated kiosk refill scene',
+  tag: 'Refill Kiosk',
+  title: 'Smart Automated Refill Kiosk',
+  caption: 'Coin and RFID operated refill station with calibrated dispensing.',
+};
+
+const schoolPlaza: SiteImage = {
+  id: 'school-plaza',
+  url: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003944/Khumani_Water_ATM_School_Plaza_wa0a0i.png',
+  alt: 'Khumani Water ATM installed at a school plaza',
+  tag: 'School & Campus',
+  title: 'Water ATM at School Plaza',
+  caption: 'Safe, hygienic drinking water for students and staff throughout the day.',
+};
+
+const purificationShowroom: SiteImage = {
+  id: 'purification-showroom',
+  url: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_Purification_Showroom_vjvvfg.png',
+  alt: 'Khumani Water purification plant showroom',
+  tag: 'Purification Showroom',
+  title: 'Commercial RO Purification Showroom',
+  caption: 'Commercial RO plants and water purification systems on display.',
+};
+
+export const KHUMANI_REAL_IMAGES = {
+  communityService,
+  kioskRefill,
+  schoolPlaza,
+  purificationShowroom,
+} as const;
+
+export const KHUMANI_IMAGE_LIST: SiteImage[] = Object.values(KHUMANI_REAL_IMAGES);

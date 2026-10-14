@@ -581,9 +581,21 @@ export const SITE_CONFIG = {
   ],
 };
 
-export const KHUMANI_REAL_IMAGES = [
+const rawImageArray = [
   'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_ATM_Community_Service_iadjv3.png',
   'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png',
   'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003944/Khumani_Water_ATM_School_Plaza_wa0a0i.png',
   'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_Purification_Showroom_vjvvfg.png',
 ];
+
+export const KHUMANI_REAL_IMAGES: string[] & {
+  communityService: string;
+  kioskRefill: string;
+  schoolPlaza: string;
+  showroom: string;
+} = Object.assign(rawImageArray, {
+  communityService: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_ATM_Community_Service_iadjv3.png',
+  kioskRefill: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png',
+  schoolPlaza: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003944/Khumani_Water_ATM_School_Plaza_wa0a0i.png',
+  showroom: 'https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_Purification_Showroom_vjvvfg.png',
+});

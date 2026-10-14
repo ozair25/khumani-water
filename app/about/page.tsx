@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Building2, 
   MapPin, 
@@ -180,45 +181,87 @@ export default function AboutContactPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md">
-                <div className="h-52 relative border-b border-[#BDE0F7]">
-                  <ProductCardVisual category="water-atm" name="Water ATM" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md group">
+                <div className="h-48 relative border-b border-[#BDE0F7]">
+                  <Image
+                    src="https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_ATM_Community_Service_iadjv3.png"
+                    alt="Khumani Water ATM Community Service"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    referrerPolicy="no-referrer"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="text-sm font-heading font-bold text-[#002348]">
-                    Automated Water ATM Kiosks
+                    Water ATM Community Service
                   </h3>
                   <p className="text-xs text-[#2D5377] mt-1">
-                    Heavy SS 304 coin & RFID dispensing units.
+                    Heavy SS 304 coin & RFID kiosks.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md">
-                <div className="h-52 relative border-b border-[#BDE0F7]">
-                  <ProductCardVisual category="ro-system" name="Commercial RO" />
+              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md group">
+                <div className="h-48 relative border-b border-[#BDE0F7]">
+                  <Image
+                    src="https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khumani_Water_Purification_Showroom_vjvvfg.png"
+                    alt="Khumani Water Purification Showroom"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    referrerPolicy="no-referrer"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="text-sm font-heading font-bold text-[#002348]">
-                    Commercial RO Plants
+                    Purification Showroom
                   </h3>
                   <p className="text-xs text-[#2D5377] mt-1">
-                    Skid-mounted industrial filtration systems.
+                    Domestic & commercial purification range.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md">
-                <div className="h-52 relative border-b border-[#BDE0F7]">
-                  <ProductCardVisual category="chiller" name="Chilled Systems" />
+              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md group">
+                <div className="h-48 relative border-b border-[#BDE0F7]">
+                  <Image
+                    src="https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003944/Khumani_Water_ATM_School_Plaza_wa0a0i.png"
+                    alt="Khumani Water ATM School & Commercial Plaza"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    referrerPolicy="no-referrer"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="text-sm font-heading font-bold text-[#002348]">
-                    Chilled Water Systems
+                    School & Commercial Plaza ATM
                   </h3>
                   <p className="text-xs text-[#2D5377] mt-1">
-                    Rapid-cooling food-grade stainless dispensers.
+                    Rapid-cooling food-grade dispensers.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md group">
+                <div className="h-48 relative border-b border-[#BDE0F7]">
+                  <Image
+                    src="https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png"
+                    alt="Khumani Water Kiosk Refill Scene"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    referrerPolicy="no-referrer"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-sm font-heading font-bold text-[#002348]">
+                    Water Kiosk Refill Scene
+                  </h3>
+                  <p className="text-xs text-[#2D5377] mt-1">
+                    Daily 20L community jar refilling.
                   </p>
                 </div>
               </div>

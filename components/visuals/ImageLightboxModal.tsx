@@ -5,10 +5,14 @@ import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface LightboxImageData {
-  src: string;
+  src?: string;
+  url?: string;
   alt: string;
   title?: string;
   description?: string;
+  caption?: string;
+  tag?: string;
+  id?: string;
 }
 
 interface ImageLightboxModalProps {
@@ -18,6 +22,28 @@ interface ImageLightboxModalProps {
   currentIndex?: number;
   onNavigate?: (index: number) => void;
   image?: LightboxImageData | string | null;
+}
+
+interface ResolvedImage {
+  src: string;
+  alt: string;
+  title?: string;
+  description?: string;
+}
+
+function toItem(entry: LightboxImageData | string | null | undefined): ResolvedImage | null {
+  if (!entry) return null;
+  if (typeof entry === 'string') {
+    return { src: entry, alt: 'Khumani Water Solution Image' };
+  }
+  const src = entry.src ?? entry.url;
+  if (!src) return null;
+  return {
+    src,
+    alt: entry.alt,
+    title: entry.title,
+    description: entry.description ?? entry.caption,
+  };
 }
 
 export function ImageLightboxModal({
@@ -49,18 +75,9 @@ export function ImageLightboxModal({
 
   if (!isOpen) return null;
 
-  // Resolve current image item
-  const currentItem = image
-    ? typeof image === 'string'
-      ? { src: image, alt: 'Khumani Water Solution Image' }
-      : image
-    : images[currentIndex]
-    ? typeof images[currentIndex] === 'string'
-      ? { src: images[currentIndex] as string, alt: 'Khumani Water Solution Image' }
-      : (images[currentIndex] as LightboxImageData)
-    : null;
+  const currentItem = toItem(image ?? images[currentIndex]);
 
-  if (!currentItem || !currentItem.src) return null;
+  if (!currentItem) return null;
 
   return (
     <div

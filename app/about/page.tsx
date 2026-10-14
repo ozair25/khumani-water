@@ -246,14 +246,14 @@ export default function AboutContactPage() {
               </div>
 
               <div className="bg-white rounded-2xl border-2 border-[#BDE0F7] overflow-hidden shadow-md group">
-                <div className="h-48 relative border-b border-[#BDE0F7]">
+                <div className="h-52 relative border-b border-[#BDE0F7] bg-[#F4F9FD] p-2 flex items-center justify-center">
                   <Image
                     src="https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png"
                     alt="Khumani Water Kiosk Refill Scene"
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
                     referrerPolicy="no-referrer"
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 text-center">

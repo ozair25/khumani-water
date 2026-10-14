@@ -126,14 +126,14 @@ export default function ServicesPage() {
             {/* Service 1 */}
             <div className="bg-white rounded-2xl p-6 border-2 border-[#BDE0F7] shadow-md hover:border-[#006FB8] hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden">
               <div>
-                <div className="h-44 sm:h-48 relative -mx-6 -mt-6 mb-4 border-b border-[#BDE0F7] bg-[#F4F9FD]">
+                <div className="h-52 sm:h-60 relative -mx-6 -mt-6 mb-4 border-b border-[#BDE0F7] bg-[#F4F9FD] p-2 flex items-center justify-center">
                   <Image
                     src="https://res.cloudinary.com/dtrvyelcg/image/upload/v1792003945/Khummani_Water_Kiosk_Refill_Scene_dkfwfc.png"
                     alt="Khumani Water Kiosk Installation & Refill Scene"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     referrerPolicy="no-referrer"
-                    className="object-cover object-center"
+                    className="object-contain object-center"
                   />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#002348] mb-2">
